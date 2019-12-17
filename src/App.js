@@ -6,13 +6,14 @@ import { Platform, StyleSheet, Text, View } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import { Provider } from 'react-redux'
 
+import colors from './config/colors.js'
 import AppNavigator from './navigation/AppNavigator'
 import store from './redux/store'
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: colors.triadic,
   },
 })
 
