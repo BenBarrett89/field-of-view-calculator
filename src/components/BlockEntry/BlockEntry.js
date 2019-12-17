@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+  Button,
   TextInput,
   View
 } from 'react-native'
@@ -15,6 +16,7 @@ class BlockEntry extends React.Component {
           style={styles.textInput}
           keyboardType='numeric'
         />
+        <Button title={'Clear'}/>
       </View>
     )
   }
