@@ -1,6 +1,8 @@
 import initialState from './initialState'
 import { typeSetBlocks as type } from '../actionTypes'
 
+import calculation from './resultCalculation'
+
 const action = blocks => ({ type, blocks })
 
 const reducer = (state, action) => action.type === type ? setBlocks({ state, action }) : state
@@ -10,7 +12,7 @@ const setBlocks = ({ state, action }) => {
   const fovmm = state.lens.fovmm
   return Object.assign({}, state, {
     blocks,
-    result: blocks * fovmm
+    result: calculation({ blocks, fovmm })
   })
 }
 

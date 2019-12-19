@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
     height: 40,
     width: '60%',
     backgroundColor: colors.white,
+    fontSize: 24
   },
   button: {
 
