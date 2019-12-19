@@ -10,7 +10,7 @@ class Result extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Result</Text>
+        <Text style={styles.result}>{this.props.result}mm</Text>
       </View>
     )
   }

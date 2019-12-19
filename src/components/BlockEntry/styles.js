@@ -4,18 +4,24 @@ import colors from '../../config/colors'
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    // Flex Item properties
+    flexGrow: 1,
+    height: '30%',
+    width: '50%',
+    // Flex Container properties
+    alignItems: 'center',
     flexDirection: 'column',
-    backgroundColor: colors.analogous,
     justifyContent: 'space-around',
-    alignItems: 'center'
+    // Color properties
+    backgroundColor: colors.analogous,
   },
   textInput: {
     height: 40,
-    width: '45%',
-    borderColor:
-      'gray',
-    borderWidth: 1
+    width: '60%',
+    backgroundColor: colors.white,
+  },
+  button: {
+
   }
 })
 

@@ -4,11 +4,20 @@ import colors from '../../config/colors'
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    // Flex Item properties
+    flexGrow: 1,
+    height: '30%',
+    width: '50%',
+    // Flex Container properties
+    alignItems: 'center',
     flexDirection: 'row',
-    backgroundColor: colors.analogousVariant,
     justifyContent: 'space-around',
-    alignItems: 'center'
+    // Color properties
+    backgroundColor: colors.analogousVariant,
+  },
+  result: {
+    color: colors.white,
+    fontSize: 40
   }
 })
 

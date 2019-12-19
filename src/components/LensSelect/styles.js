@@ -2,17 +2,34 @@ import { StyleSheet } from 'react-native'
 
 import colors from '../../config/colors'
 
+const touchable = {
+  // Flex Item properties
+  flexGrow: 1,
+  // Flex Container properties
+  alignItems: 'center',
+  alignContent: 'center',
+  justifyContent: 'space-around',
+  // Style
+  backgroundColor: colors.primary,
+}
+
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    // Flex Item properties
+    flexGrow: 1,
+    height: '30%',
+    width: '100%',
+    // Flex Container properties
+    alignItems: 'stretch',
+    alignContent: 'stretch',
     flexDirection: 'row',
-    backgroundColor: colors.primary,
-    justifyContent: 'space-around',
-    alignItems: 'center'
+    flexWrap: 'wrap',
+    justifyContent: 'space-evenly',
   },
-  button: {
-
-  }
+  touchable,
+  selected: Object.assign({}, touchable, {
+    backgroundColor: colors.complimentary,
+  })
 })
 
 export default styles

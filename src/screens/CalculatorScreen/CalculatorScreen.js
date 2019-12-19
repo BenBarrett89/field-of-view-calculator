@@ -12,6 +12,8 @@ import BlockEntry from '../../components/BlockEntry'
 import LensSelect from '../../components/LensSelect'
 import Result from '../../components/Result'
 
+import { setBlocks, setLens } from '../../redux/calculator/actions'
+
 class CalculatorScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return {
@@ -23,19 +25,28 @@ class CalculatorScreen extends React.Component {
     const { navigation } = this.props
     return (
       <View style={styles.container}>
-        <LensSelect />
-        <BlockEntry />
-        <Result />
+        <LensSelect
+          lens={this.props.calculator.lens}
+          setLens={this.props.setLens}
+        />
+        <BlockEntry
+          blocks={this.props.calculator.blocks}
+          setBlocks={this.props.setBlocks}
+        />
+        <Result
+          result={this.props.calculator.result}
+        />
       </View>
     )
   }
 }
 
 export default connect(
-  state => ({ count: state.count }),
+  state => ({
+    calculator: state.calculator
+  }),
   dispatch => ({
-    increment: () => dispatch({ type: 'INCREMENT' }),
-    decrement: () => dispatch({ type: 'DECREMENT' }),
-    reset: () => dispatch({ type: 'RESET' })
+    setLens: lens => dispatch(setLens(lens)),
+    setBlocks: block => dispatch(setBlocks(block)),
   })
 )(CalculatorScreen)

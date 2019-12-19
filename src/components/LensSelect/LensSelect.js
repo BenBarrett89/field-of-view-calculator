@@ -1,12 +1,11 @@
 import React from 'react'
 import {
-  Button,
   Text,
+  TouchableHighlight,
   View
 } from 'react-native'
 
 import lenses from '../../config/lenses'
-
 import styles from './styles'
 
 class LensSelect extends React.Component {
@@ -16,11 +15,15 @@ class LensSelect extends React.Component {
         {
           lenses.map(lens => {
             return (
-              <Button
+              <TouchableHighlight
+                onPress={() => this.props.setLens(lens)}
                 key={lens.label}
-                style={styles.button}
-                title={lens.label}
-              />
+                style={lens.label === this.props.lens.label ? styles.selected : styles.touchable}
+              >
+                <View>
+                  <Text>{lens.label}</Text>
+                </View>
+              </TouchableHighlight>
             )
           })
         }

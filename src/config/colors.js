@@ -5,5 +5,6 @@ export default {
   background: '#000000',
   complimentary: '#D49623',
   triadic: '#9623D4',
-  triadicVariant: '#D42361'
+  triadicVariant: '#D42361',
+  white: '#FFFFFF'
 }
