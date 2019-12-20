@@ -12,13 +12,16 @@ class BlockEntry extends React.Component {
     return (
       <View style={styles.container}>
         <TextInput
+          autoFocus={true}
+          ref='Blocks'
           keyboardType='numeric'
           onChangeText={number => this.props.setBlocks(number)}
           placeholder={'Blocks'}
-          style={styles.textInput}
-          value={this.props.blocks}
+          style={this.props.valid ? styles.textInput : styles.invalidTextInput}
+          value={this.props.blocks ? `${this.props.blocks}` : null}
         />
         <Button
+          ref='Clear'
           onPress={() => this.props.setBlocks(0)}
           style={styles.button}
           title={'Clear'}

@@ -3,7 +3,7 @@ import { Asset } from 'expo-asset'
 import * as Font from 'expo-font'
 import React, { useState } from 'react'
 import { Platform, StyleSheet, Text, View } from 'react-native'
-import { Ionicons } from '@expo/vector-icons'
+// import { Ionicons } from '@expo/vector-icons'
 import { Provider } from 'react-redux'
 
 import colors from './config/colors.js'
@@ -13,7 +13,7 @@ import store from './redux/store'
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.triadic,
+    backgroundColor: colors.background,
   },
 })
 
@@ -41,9 +41,9 @@ export default function App() {
 
 async function loadResourcesAsync() {
   await Promise.all([
-    Font.loadAsync({
-      ...Ionicons.font,
-    })
+    // Font.loadAsync({
+    //   ...Ionicons.font,
+    // })
   ])
 }
 

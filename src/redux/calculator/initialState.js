@@ -4,4 +4,5 @@ module.exports = {
     fovmm: 0
   },
   result: 0,
+  valid: true
 }

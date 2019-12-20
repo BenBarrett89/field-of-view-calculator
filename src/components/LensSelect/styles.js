@@ -2,6 +2,19 @@ import { StyleSheet } from 'react-native'
 
 import colors from '../../config/colors'
 
+const container = {
+  // Flex Item properties
+  flexGrow: 1,
+  height: '30%',
+  width: '100%',
+  // Flex Container properties
+  alignItems: 'stretch',
+  alignContent: 'stretch',
+  flexDirection: 'row',
+  flexWrap: 'wrap',
+  justifyContent: 'space-evenly',
+}
+
 const touchable = {
   // Flex Item properties
   flexGrow: 1,
@@ -13,23 +26,14 @@ const touchable = {
   backgroundColor: colors.primary,
 }
 
+const selected = Object.assign({}, touchable, {
+  backgroundColor: colors.complimentary,
+})
+
 const styles = StyleSheet.create({
-  container: {
-    // Flex Item properties
-    flexGrow: 1,
-    height: '30%',
-    width: '100%',
-    // Flex Container properties
-    alignItems: 'stretch',
-    alignContent: 'stretch',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-evenly',
-  },
+  container,
   touchable,
-  selected: Object.assign({}, touchable, {
-    backgroundColor: colors.complimentary,
-  })
+  selected
 })
 
 export default styles

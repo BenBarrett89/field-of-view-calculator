@@ -16,6 +16,7 @@ class LensSelect extends React.Component {
           lenses.map(lens => {
             return (
               <TouchableHighlight
+                ref={`${lens.label}Lens`}
                 onPress={() => this.props.setLens(lens)}
                 key={lens.label}
                 style={lens.label === this.props.lens.label ? styles.selected : styles.touchable}
