@@ -8,11 +8,12 @@ import styles from './styles'
 
 class Result extends React.Component {
   render() {
+    const { result, valid } = this.props
     return (
       <View
-        style={this.props.valid ? styles.container : styles.invalidContainer}
+        style={valid ? styles.container : styles.invalidContainer}
       >
-        <Text style={styles.result}>{this.props.result}mm</Text>
+        <Text style={styles.result}>{result}mm</Text>
       </View>
     )
   }

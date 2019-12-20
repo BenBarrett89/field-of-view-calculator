@@ -45,7 +45,7 @@ class CalculatorScreen extends React.Component {
 
 export default connect(
   state => ({
-    calculator: state.calculator
+    calculator: state.calculator,
   }),
   dispatch => ({
     setLens: lens => dispatch(setLens(lens)),

@@ -2,6 +2,13 @@ import { StyleSheet } from 'react-native'
 
 import colors from '../../config/colors'
 
+const colorMapping = {
+  selectedBackgroundColor: colors.complimentary,
+  selectedTextColor: colors.white,
+  touchableBackgroundColor: colors.primary,
+  touchableTextColor: colors.white,
+}
+
 const container = {
   // Flex Item properties
   flexGrow: 1,
@@ -17,23 +24,24 @@ const container = {
 
 const touchable = {
   // Flex Item properties
+  flexDirection: 'column',
   flexGrow: 1,
   // Flex Container properties
   alignItems: 'center',
   alignContent: 'center',
   justifyContent: 'space-around',
   // Style
-  backgroundColor: colors.primary,
+  backgroundColor: colorMapping.touchableBackgroundColor,
 }
 
 const selected = Object.assign({}, touchable, {
-  backgroundColor: colors.complimentary,
+  backgroundColor: colorMapping.selectedBackgroundColor,
 })
 
 const styles = StyleSheet.create({
   container,
   touchable,
-  selected
+  selected,
 })
 
 export default styles

@@ -2,6 +2,10 @@ import { StyleSheet } from 'react-native'
 
 import colors from '../../config/colors'
 
+const colorMapping = {
+  screenBackgroundColor: colors.background,
+}
+
 const container = {
   // Flex Item properties
   flexGrow: 1,
@@ -12,11 +16,11 @@ const container = {
   flexWrap: 'wrap',
   justifyContent: 'center',
   // Color Properties
-  backgroundColor: colors.background,
+  backgroundColor: colorMapping.screenBackgroundColor,
 }
 
 const styles = StyleSheet.create({
-  container
+  container,
 })
 
 export default styles

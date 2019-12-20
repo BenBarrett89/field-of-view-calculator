@@ -2,6 +2,12 @@ import { StyleSheet } from 'react-native'
 
 import colors from '../../config/colors'
 
+const colorMapping = {
+  containerBackgroundColor: colors.analogousVariant,
+  invalidContainerBackgroundColor: colors.error,
+  resultTextColor: colors.white,
+}
+
 const container = {
   // Flex Item properties
   flexGrow: 1,
@@ -12,16 +18,16 @@ const container = {
   flexDirection: 'row',
   justifyContent: 'space-around',
   // Color properties
-  backgroundColor: colors.analogousVariant,
+  backgroundColor: colorMapping.containerBackgroundColor,
 }
 
 const result = {
-  color: colors.white,
+  color: colorMapping.resultTextColor,
   fontSize: 40
 }
 
 const invalidContainer = Object.assign({}, container, {
-  backgroundColor: colors.error
+  backgroundColor: colorMapping.invalidContainerBackgroundColor
 })
 
 const styles = StyleSheet.create({

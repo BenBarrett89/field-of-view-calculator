@@ -10,16 +10,23 @@ import styles from './styles'
 
 class LensSelect extends React.Component {
   render() {
+    const { setLens } = this.props
+    const selectedLens = this.props.lens
     return (
       <View style={styles.container}>
         {
           lenses.map(lens => {
+            const selected = lens.label === selectedLens.label
             return (
               <TouchableHighlight
                 ref={`${lens.label}Lens`}
-                onPress={() => this.props.setLens(lens)}
+                onPress={() => setLens(lens)}
                 key={lens.label}
-                style={lens.label === this.props.lens.label ? styles.selected : styles.touchable}
+                style={
+                  selected
+                    ? styles.selected
+                    : styles.touchable
+                }
               >
                 <View>
                   <Text>{lens.label}</Text>

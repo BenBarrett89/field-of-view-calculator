@@ -2,6 +2,14 @@ import { StyleSheet } from 'react-native'
 
 import colors from '../../config/colors'
 
+const colorMapping = {
+  containerBackgroundColor: colors.analogous,
+  invalidContainerBackgroundColor: colors.errorVariant,
+  invalidTextInputBorderColor: colors.error,
+  textInputBackground: colors.white,
+  // TODO Button
+}
+
 const container = {
   // Flex Item properties
   flexGrow: 1,
@@ -12,24 +20,26 @@ const container = {
   flexDirection: 'column',
   justifyContent: 'space-around',
   // Color properties
-  backgroundColor: colors.analogous,
+  backgroundColor: colorMapping.containerBackgroundColor,
 }
 
 const invalidContainer = Object.assign({}, container, {
-  backgroundColor: colors.errorVariant,
+  backgroundColor: colorMapping.invalidContainerBackgroundColor,
 })
 
-const button = {}
+const button = {
+  // TODO
+}
 
 const textInput = {
   height: 40,
   width: '60%',
-  backgroundColor: colors.white,
+  backgroundColor: colorMapping.textInputBackground,
   fontSize: 24
 }
 
 const invalidTextInput = Object.assign({}, textInput, {
-  borderColor: colors.error,
+  borderColor: colorMapping.textInputBackground,
   borderWidth: 3
 })
 
