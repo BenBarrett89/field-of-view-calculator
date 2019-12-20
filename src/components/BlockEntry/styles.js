@@ -15,6 +15,10 @@ const container = {
   backgroundColor: colors.analogous,
 }
 
+const invalidContainer = Object.assign({}, container, {
+  backgroundColor: colors.errorVariant,
+})
+
 const button = {}
 
 const textInput = {
@@ -25,18 +29,14 @@ const textInput = {
 }
 
 const invalidTextInput = Object.assign({}, textInput, {
+  borderColor: colors.error,
+  borderWidth: 3
 })
 
 const styles = StyleSheet.create({
   container,
-  invalidTextInput: {
-    height: 40,
-    width: '60%',
-    backgroundColor: colors.white,
-    fontSize: 24,
-    borderColor: colors.error,
-    borderWidth: 3
-  },
+  invalidContainer,
+  invalidTextInput,
   textInput,
   button
 })

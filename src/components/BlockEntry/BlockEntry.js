@@ -10,7 +10,7 @@ import styles from './styles'
 class BlockEntry extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
+      <View style={this.props.valid ? styles.container : styles.invalidContainer}>
         <TextInput
           autoFocus={true}
           ref='Blocks'
