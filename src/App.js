@@ -3,12 +3,12 @@ import { Asset } from 'expo-asset'
 import * as Font from 'expo-font'
 import React, { useState } from 'react'
 import { Platform, StyleSheet, Text, View } from 'react-native'
-// import { Ionicons } from '@expo/vector-icons'
+import { MaterialIcons } from '@expo/vector-icons'
 import { Provider } from 'react-redux'
 
 import colors from './config/colors.js'
 import AppNavigator from './navigation/AppNavigator'
-import store from './redux/store'
+import configureStore from './redux/store'
 
 const styles = StyleSheet.create({
   container: {
@@ -17,6 +17,8 @@ const styles = StyleSheet.create({
 })
 
 export default function App() {
+  const store = configureStore()
+
   const [isLoadingComplete, setLoadingComplete] = useState(false)
 
   if (!isLoadingComplete) {
@@ -40,9 +42,9 @@ export default function App() {
 
 async function loadResourcesAsync() {
   await Promise.all([
-    // Font.loadAsync({
-    //   ...Ionicons.font,
-    // })
+    Font.loadAsync({
+      ...MaterialIcons.font,
+    })
   ])
 }
 

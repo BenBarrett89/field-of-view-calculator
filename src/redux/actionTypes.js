@@ -1,3 +1,4 @@
 // calculator
-export const typeSetBlocks = `CALCULATOR_SET_BLOCKS`
-export const typeSetLens = `CALCULATOR_SET_LENS`
+export const typeCalculate = `calculator/calculate`
+export const typeSetBlocks = `calculator/setBlocks`
+export const typeSetLens = `calculator/setLens`
