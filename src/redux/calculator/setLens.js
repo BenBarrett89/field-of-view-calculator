@@ -13,5 +13,5 @@ const setLens = ({ state, action }) => {
 
 module.exports = {
   action,
-  reducer
+  reducer,
 }

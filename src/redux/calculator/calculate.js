@@ -8,14 +8,18 @@ const reducer = (state, action) => action.type === type ? calculate({ state, act
 
 const calculate = ({ state, action }) => {
   const blocks = state.blocks
-  const fovmm = state.lens ? state.lens.fovmm : 0
+  const fovmm = state.lens.fovmm
   const result = calculation({ blocks, fovmm })
+
+  const error = isNaN(result)
+
   return Object.assign({}, state, {
-    result
+    error,
+    result,
   })
 }
 
 module.exports = {
   action,
-  reducer
+  reducer,
 }

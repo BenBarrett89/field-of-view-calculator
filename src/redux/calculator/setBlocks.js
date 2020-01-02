@@ -15,5 +15,5 @@ const setBlocks = ({ state, action }) => {
 
 module.exports = {
   action,
-  reducer
+  reducer,
 }

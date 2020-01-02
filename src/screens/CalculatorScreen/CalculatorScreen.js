@@ -35,6 +35,7 @@ class CalculatorScreen extends React.Component {
           valid={this.props.calculator.valid}
         />
         <Result
+          error={this.props.calculator.error}
           result={this.props.calculator.result}
           valid={this.props.calculator.valid}
         />
