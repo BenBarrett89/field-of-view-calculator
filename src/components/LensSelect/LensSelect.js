@@ -29,7 +29,11 @@ class LensSelect extends React.Component {
                 }
               >
                 <View>
-                  <Text>{lens.label}</Text>
+                  <Text style={
+                    selected
+                      ? styles.selectedText
+                      : styles.touchableText
+                  }>{lens.label}</Text>
                 </View>
               </TouchableHighlight>
             )

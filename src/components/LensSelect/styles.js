@@ -3,10 +3,10 @@ import { StyleSheet } from 'react-native'
 import colors from '../../config/colors'
 
 const colorMapping = {
-  selectedBackgroundColor: colors.complimentary,
-  selectedTextColor: colors.white,
+  selectedBackgroundColor: colors.accent,
+  selectedTextColor: colors.text,
   touchableBackgroundColor: colors.primary,
-  touchableTextColor: colors.white,
+  touchableTextColor: colors.textPrimary,
 }
 
 const container = {
@@ -34,14 +34,28 @@ const touchable = {
   backgroundColor: colorMapping.touchableBackgroundColor,
 }
 
+const touchableText = {
+  color: colorMapping.touchableTextColor,
+  fontSize: 18,
+  fontWeight: 'normal',
+}
+
 const selected = Object.assign({}, touchable, {
   backgroundColor: colorMapping.selectedBackgroundColor,
 })
 
+const selectedText = {
+  color: colorMapping.selectedTextColor,
+  fontSize: 18,
+  fontWeight: 'bold',
+}
+
 const styles = StyleSheet.create({
   container,
   touchable,
+  touchableText,
   selected,
+  selectedText,
 })
 
 export default styles

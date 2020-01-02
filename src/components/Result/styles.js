@@ -3,9 +3,9 @@ import { StyleSheet } from 'react-native'
 import colors from '../../config/colors'
 
 const colorMapping = {
-  containerBackgroundColor: colors.analogousVariant,
-  invalidContainerBackgroundColor: colors.error,
-  resultTextColor: colors.white,
+  containerBackgroundColor: colors.accent,
+  invalidContainerBackgroundColor: colors.errorVariant,
+  resultTextColor: colors.text,
 }
 
 const container = {

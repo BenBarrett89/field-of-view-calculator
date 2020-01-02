@@ -14,10 +14,9 @@ const AppNavigator = createStackNavigator(
     initialRouteName: 'Calculator',
     defaultNavigationOptions: {
       headerStyle: {
-        fontColor: colors.primary,
-        backgroundColor: colors.complimentary,
+        backgroundColor: colors.primaryDark,
       },
-      headerTintColor: '#fff',
+      headerTintColor: colors.text,
       headerTitleStyle: {
         fontWeight: 'bold',
       },

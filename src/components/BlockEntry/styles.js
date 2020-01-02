@@ -3,10 +3,10 @@ import { StyleSheet } from 'react-native'
 import colors from '../../config/colors'
 
 const colorMapping = {
-  containerBackgroundColor: colors.analogous,
-  invalidContainerBackgroundColor: colors.errorVariant,
-  invalidTextInputBorderColor: colors.error,
-  textInputBackground: colors.white,
+  containerBackgroundColor: colors.primaryDark,
+  invalidContainerBackgroundColor: colors.error,
+  invalidTextInputBorderColor: colors.errorVariant,
+  textInputBackground: colors.text,
   // TODO Button
 }
 
