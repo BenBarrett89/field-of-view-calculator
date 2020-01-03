@@ -40,7 +40,7 @@ const messageContainer = {
 
 export const buttonStyle = {
   color: colorMapping.buttonColor,
-  errorColor: colorMapping.containerBackgroundColor,
+  errorColor: colorMapping.messageTextColor,
 }
 
 const textInput = {
