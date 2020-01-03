@@ -30,6 +30,11 @@ const invalidContainer = Object.assign({}, container, {
   backgroundColor: colorMapping.invalidContainerBackgroundColor
 })
 
+export const errorIcon = {
+  color: colorMapping.resultTextColor,
+  size: result.fontSize * 3,
+}
+
 const styles = StyleSheet.create({
   container,
   invalidContainer,
