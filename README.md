@@ -31,6 +31,8 @@ In summary, I used this exercise to learn about:
 
 ## Application ##
 
+The application is [available for Android here through Expo](https://expo.io/@benbarrett89/file-of-view-calculator).
+
 The application has a single page; the calculator.
 
 The top section is used to select the lens. The left section is used to enter the number of blocks. The right section shows the result of the calculation. The bottom is intentionally left empty to provide space for the keyboard.
