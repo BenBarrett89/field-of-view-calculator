@@ -1,4 +1,5 @@
-import { filter, mapTo } from 'rxjs/operators'
+import { ofType } from 'redux-observable'
+import { mapTo } from 'rxjs/operators'
 
 import {
   typeCalculate,
@@ -10,7 +11,7 @@ import { action as calculate } from './calculate'
 
 const calculateEpic = action$ => action$
   .pipe(
-    filter(action => action.type === typeSetBlocks || action.type === typeSetLens),
+    ofType(typeSetBlocks, typeSetLens),
     mapTo(calculate())
   )
 
