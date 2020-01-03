@@ -31,6 +31,7 @@ class CalculatorScreen extends React.Component {
         />
         <BlockEntry
           blocks={this.props.calculator.blocks}
+          error={this.props.calculator.error}
           setBlocks={this.props.setBlocks}
           valid={this.props.calculator.valid}
         />
