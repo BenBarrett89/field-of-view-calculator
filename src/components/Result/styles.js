@@ -23,7 +23,7 @@ const container = {
 
 const result = {
   color: colorMapping.resultTextColor,
-  fontSize: 40
+  fontSize: 36
 }
 
 const invalidContainer = Object.assign({}, container, {

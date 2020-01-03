@@ -4,7 +4,10 @@ import colors from '../../config/colors'
 
 const colorMapping = {
   buttonColor: colors.accent,
+  buttonTextColor: colors.text,
   containerBackgroundColor: colors.primaryDark,
+  invalidButtonColor: colors.text,
+  invalidButtonTextColor: colors.error,
   invalidContainerBackgroundColor: colors.error,
   invalidTextInputColor: colors.errorVariant,
   messageTextColor: colors.text,
@@ -31,6 +34,7 @@ const invalidContainer = Object.assign({}, container, {
 
 const buttonContainer = {
   height: '30%',
+  width: '90%',
 }
 
 const messageContainer = {
@@ -38,10 +42,25 @@ const messageContainer = {
   height: '30%',
 }
 
-export const buttonStyle = {
-  color: colorMapping.buttonColor,
-  errorColor: colorMapping.messageTextColor,
+const button = {
+  alignItems: 'center',
+  backgroundColor: colorMapping.buttonColor,
+  padding: 10,
+  paddingHorizontal: 40,
+  width: '90%',
 }
+
+const invalidButton = Object.assign({}, button, {
+  backgroundColor: colorMapping.invalidButtonColor,
+})
+
+const buttonText = {
+  color: colorMapping.buttonTextColor,
+}
+
+const invalidButtonText = Object.assign({}, buttonText, {
+  color: colorMapping.invalidButtonTextColor,
+})
 
 const textInput = {
   backgroundColor: colorMapping.textInputBackground,
@@ -70,8 +89,12 @@ const messageText = {
 }
 
 const styles = StyleSheet.create({
+  button,
+  buttonText,
   buttonContainer,
   container,
+  invalidButton,
+  invalidButtonText,
   invalidContainer,
   invalidTextInput,
   messageContainer,

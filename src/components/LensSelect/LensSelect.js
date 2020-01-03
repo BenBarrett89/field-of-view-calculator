@@ -6,7 +6,7 @@ import {
 } from 'react-native'
 
 import lenses from '../../config/lenses'
-import styles from './styles'
+import styles, { touchableHighlightColor } from './styles'
 
 class LensSelect extends React.Component {
   render() {
@@ -27,6 +27,7 @@ class LensSelect extends React.Component {
                     ? styles.selected
                     : styles.touchable
                 }
+                underlayColor={touchableHighlightColor}
               >
                 <View>
                   <Text style={

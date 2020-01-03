@@ -3,13 +3,14 @@ import {
   Button,
   Text,
   TextInput,
+  TouchableOpacity,
   View
 } from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons'
 
 import { softMaximumBlocks } from '../../config/constants'
 
-import styles, { buttonStyle, messageIcon } from './styles'
+import styles, { messageIcon } from './styles'
 
 class BlockEntry extends React.Component {
   render() {
@@ -33,12 +34,16 @@ class BlockEntry extends React.Component {
           value={blocks ? `${blocks}` : null}
         />
         <View styles={styles.buttonContainer}>
-          <Button
-            color={valid ? buttonStyle.color : buttonStyle.errorColor}
-            ref='Clear'
+          <TouchableOpacity
             onPress={() => setBlocks(0)}
-            title={'Clear'}
-          />
+            style={valid ? styles.button : styles.invalidButton}
+          >
+            <Text
+              style={valid ? styles.buttonText : styles.invalidButtonText}
+            >
+              Clear
+            </Text>
+          </TouchableOpacity>
         </View>
         {valid
           ? blocks > 0

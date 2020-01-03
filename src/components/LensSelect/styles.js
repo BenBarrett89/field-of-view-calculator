@@ -6,6 +6,7 @@ const colorMapping = {
   selectedBackgroundColor: colors.accent,
   selectedTextColor: colors.text,
   touchableBackgroundColor: colors.primary,
+  touchableHighlightColor: colors.primaryLight,
   touchableTextColor: colors.textPrimary,
 }
 
@@ -57,5 +58,7 @@ const styles = StyleSheet.create({
   selected,
   selectedText,
 })
+
+export const touchableHighlightColor = colorMapping.touchableHighlightColor
 
 export default styles
