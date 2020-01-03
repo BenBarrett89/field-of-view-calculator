@@ -16,7 +16,7 @@ I used this opportunity to try [React Native](http://facebook.github.io/react-na
 
 I found that [Expo](https://expo.io/) was recommended for React Native development, so decided to use that too.
 
-React Native suggests the use of [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox), a CSS layout that I was not familiar with, so I was able to learn a bit about that too.
+React Native suggests the use of [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox), a CSS layout that I was not familiar with, so I was able to learn a bit about that too. I found the [CSS-Tricks A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) very useful for this.
 
 I had used [Redux](https://redux.js.org/) for managing state in React projects before and required dependent actions. In the past I had used [`redux-thunk`](https://github.com/reduxjs/redux-thunk), [`redux-on-state-change`](https://github.com/franjohn21/redux-on-state-change) and [`redux-saga`](https://redux-saga.js.org/) for more advanced Redux operations but decided to try [`redux-observable`](https://redux-observable.js.org/), a [RxJS](https://rxjs-dev.firebaseapp.com/) middleware for Redux, this time as I did not have experience of RxJS and wanted to try something new (plus it looked easier than sagas for my simple application!).
 
