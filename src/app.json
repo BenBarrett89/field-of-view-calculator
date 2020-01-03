@@ -15,7 +15,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#455A64"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -24,7 +24,10 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.benbarrett89.fieldofviewcalculator"
+    },
+    "android": {
+      "package": "com.benbarrett89.fieldofviewcalculator"
     }
   }
 }
