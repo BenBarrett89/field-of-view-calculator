@@ -1,6 +1,6 @@
 # field-of-view-calculator #
 
-> An Android app for calculating the block sizes for the field of view of a microscope
+> A basic React Native app for calculating the block sizes for the field of view of a microscope
 
 ## Background ##
 
@@ -27,7 +27,7 @@ In summary, I used this exercise to learn about:
 * [React Native](http://facebook.github.io/react-native/)
 * [Expo](https://expo.io/)
 * [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
-* [Redux Observable`](https://redux-observable.js.org/) / [RxJS](https://rxjs-dev.firebaseapp.com/)
+* [Redux Observable](https://redux-observable.js.org/) / [RxJS](https://rxjs-dev.firebaseapp.com/)
 
 ## Application ##
 
@@ -64,7 +64,7 @@ From the `src` directory, run the `npm install`:
 npm install
 ```
 
-## Running in expo ###
+## Running in Expo ###
 
 Uses [Expo](https://expo.io/) to run:
 
@@ -78,4 +78,4 @@ You can now use the
 
 ## Building ##
 
-> This is the next thing to learn!
+> This is [the next thing](https://docs.expo.io/versions/v36.0.0/distribution/building-standalone-apps/) to learn!
