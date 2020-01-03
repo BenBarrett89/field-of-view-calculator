@@ -6,9 +6,10 @@ const colorMapping = {
   buttonColor: colors.accent,
   containerBackgroundColor: colors.primaryDark,
   invalidContainerBackgroundColor: colors.error,
-  invalidTextInputBorderColor: colors.errorVariant,
+  invalidTextInputColor: colors.errorVariant,
   messageTextColor: colors.text,
   textInputBackground: colors.text,
+  textInputBorderColor: colors.primary,
 }
 
 const container = {
@@ -44,6 +45,8 @@ export const buttonStyle = {
 
 const textInput = {
   backgroundColor: colorMapping.textInputBackground,
+  borderColor: colorMapping.textInputBorderColor,
+  borderWidth: 3,
   fontSize: 24,
   height: 40,
   textAlign: 'center',
@@ -51,13 +54,14 @@ const textInput = {
 }
 
 const invalidTextInput = Object.assign({}, textInput, {
-  borderColor: colorMapping.textInputBackground,
-  borderWidth: 3,
+  color: colorMapping.invalidTextInputColor,
+  borderColor: colorMapping.invalidTextInputColor,
 })
 
 export const messageIcon = {
+  accentColor: colorMapping.buttonColor,
   color: colorMapping.messageTextColor,
-  size: 20
+  size: 20,
 }
 
 const messageText = {

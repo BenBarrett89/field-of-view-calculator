@@ -41,7 +41,14 @@ class BlockEntry extends React.Component {
           />
         </View>
         {valid
-          ? <View style={styles.messageContainer} />
+          ? blocks > 0
+            ? <View style={styles.messageContainer} />
+            : <View style={styles.messageContainer}>
+              <MaterialIcons name={'input'} size={messageIcon.size} color={messageIcon.accentColor} />
+              <Text style={styles.messageText}>
+                Please enter the number of blocks
+              </Text>
+            </View>
           : <View style={styles.messageContainer}>
             <MaterialIcons name={error ? 'error' : 'warning'} size={messageIcon.size} color={messageIcon.color} />
             <Text style={styles.messageText}>

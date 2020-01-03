@@ -11,7 +11,7 @@ const calculate = ({ state, action }) => {
   const fovmm = state.lens.fovmm
   const result = calculation({ blocks, fovmm })
 
-  const error = isNaN(result)
+  const error = isNaN(result) || result < 0
 
   return Object.assign({}, state, {
     error,
