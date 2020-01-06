@@ -28,7 +28,11 @@
       "bundleIdentifier": "com.benbarrett89.fieldofviewcalculator"
     },
     "android": {
-      "package": "com.benbarrett89.fieldofviewcalculator"
+      "package": "com.benbarrett89.fieldofviewcalculator",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptiveIcon/foregroundImage.png",
+        "backgroundColor": "#455A64"
+      }
     }
   }
 }
