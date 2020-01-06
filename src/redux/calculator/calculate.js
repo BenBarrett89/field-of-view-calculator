@@ -8,8 +8,8 @@ const reducer = (state, action) => action.type === type ? calculate({ state, act
 
 const calculate = ({ state, action }) => {
   const blocks = state.blocks
-  const fovmm = state.lens.fovmm
-  const result = calculation({ blocks, fovmm })
+  const x1div = state.lens.x1div
+  const result = calculation({ blocks, blockSize: x1div })
 
   const error = isNaN(result) || result < 0
 

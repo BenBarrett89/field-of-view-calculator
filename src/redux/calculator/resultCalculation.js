@@ -1,1 +1,1 @@
-export default ({ blocks, fovmm }) => parseFloat((blocks * fovmm).toFixed(12))
+export default ({ blocks, blockSize }) => parseFloat((blocks * blockSize).toFixed(12))
